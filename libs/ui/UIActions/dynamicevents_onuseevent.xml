@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Graph>
+  <Nodes>
+    <Node Id="783" Class="UI:Events:SaveLoad:OnGameplayStart" pos="-1110,130,0" flags="0">
+      <Inputs Port="-1" Idx="" />
+    </Node>
+    <Node Id="793" Class="System:ExecuteScript" pos="-820,130,0" flags="0">
+      <Inputs Script="DynamicEvents.FG_Init()" />
+    </Node>
+  </Nodes>
+  <Edges>
+    <Edge nodeIn="793" nodeOut="783" portIn="Call" portOut="onEvent" enabled="1" />
+  </Edges>
+</Graph>

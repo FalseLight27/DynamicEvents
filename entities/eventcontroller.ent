@@ -1,0 +1,4 @@
+<Entity
+        Name="EventController"
+        Script="Scripts/Entities/EventController.lua"
+/>
