@@ -77,6 +77,18 @@ function EventController:CreateSkirmish()
 
 		System.LogAlways("Checking for ideal skirmish conditions")
 		
+		--[==[
+		local success, errorOrResult = pcall(function()
+			
+			System.LogAlways("$5 [EventController] has been successfully created.")
+		end)
+
+		if not success then
+			System.LogAlways("Error in DynamicEvents.create: " .. tostring(errorOrResult))
+			System.LogAlways("StackTrace: " .. debug.traceback(errorOrResult, 2))
+		end
+		--]==]
+		
 		if event1Dist > 4 and event1Dist < 30  and spawnChance <= 100
         -- if player is farther than 30 meters from Event center but no closer than 4 meters, spawnChance check will initiate
 		-- eventually change this to a foreach
@@ -103,13 +115,13 @@ function EventController:CreateSkirmish()
 		
 		System.LogAlways("SKIRMISH CREATED SUCCESSFULLY")
 		
-		return true
+		--return true
 		
 		else
 		
 		System.LogAlways("CONDITIONS NOT MET: NO SKIRMISH")
 		
-		return false
+		--return false
 
 		end
         --self:CreateLogiOfficer(position)
